@@ -414,7 +414,7 @@ N&apos;&#xE9;tant pas pour le moment publier sur les repository maven, veuillez 
 <li>XMLLunatic (sortie d&apos;Eno ddi2js) vers JSONLunaticFlat (sortie &#xE0; plat)</li>
 </ol>
 <p>Pour utiliser ces transformations, il faut utiliser dans un ordre pr&#xE9;cis les transformations unitaires:</p>
-<h3 id="sortie-1">Sortie 1</h3>
+<h3 id="transformation-1">Transformation 1</h3>
 <p>En entr&#xE9;e de la transformation, il possible d&apos;avoir:</p>
 <ul>
 <li>un fichier xml (<code>java.io.File</code>)</li>
@@ -428,14 +428,14 @@ N&apos;&#xE9;tant pas pour le moment publier sur les repository maven, veuillez 
 JSONCleaner jsonCleaner = new JSONCleaner();
 String jsonQuestionnaire = jsonCleaner.clean(translator.translate(in));
 </code></pre>
-<h3 id="sortie-2">Sortie 2</h3>
+<h3 id="transformation-2">Transformation 2</h3>
 <p>En entr&#xE9;e de la transformation, il possible d&apos;avoir:</p>
 <ul>
 <li>un fichier xml (<code>java.io.File</code>)</li>
 <li>un <code>String</code> r&#xE9;presentant le xml</li>
-<li>un type <code>InputStream</code> (<code>java.io.InputStream</code>)
-Le fichier en entr&#xE9;e doit &#xEA;tre issue du g&#xE9;n&#xE9;rateur de questionnaire Eno (ddi2js).</li>
+<li>un type <code>InputStream</code> (<code>java.io.InputStream</code>)</li>
 </ul>
+<p>Le fichier en entr&#xE9;e doit &#xEA;tre issue du g&#xE9;n&#xE9;rateur de questionnaire Eno (ddi2js).</p>
 <p>En sortie :  un json au format <code>String</code>.</p>
 <p>Transformation:</p>
 <pre class="language-"><code class="lang-java=">XMLLunaticToXMLLunaticFlatTranslator translator = new XMLLunaticToXMLLunaticFlatTranslator();
@@ -482,7 +482,7 @@ String jsonQuestionnaire = jsonCleaner.clean(translator2.translate(translator.ge
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Comment utiliser Lunatic-Model","level":"1.5","depth":1,"previous":{"title":"Table","level":"1.4.11","depth":2,"path":"components/Table.md","ref":"components/Table.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","image-captions","include-codeblock","collapsible-chapters"],"root":"./","styles":{"website":"gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/InseeFr/Lunatic-Model/"},"search":{},"collapsible-chapters":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/InseeFr/Lunatic-Model/tree/master/docs"},"theme-default":{"styles":{"website":"gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"image-captions":{"variable_name":"_pictures"}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[]},"title":"Lunatic-Model","language":"fr","gitbook":"*"},"file":{"path":"usage/README.md","mtime":"2019-08-02T10:02:05.190Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-08-02T10:06:00.542Z"},"basePath":"..","book":{"language":"fr"}});
+            gitbook.page.hasChanged({"page":{"title":"Comment utiliser Lunatic-Model","level":"1.5","depth":1,"previous":{"title":"Table","level":"1.4.11","depth":2,"path":"components/Table.md","ref":"components/Table.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","image-captions","include-codeblock","collapsible-chapters"],"root":"./","styles":{"website":"gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/InseeFr/Lunatic-Model/"},"search":{},"collapsible-chapters":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/InseeFr/Lunatic-Model/tree/master/docs"},"theme-default":{"styles":{"website":"gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"image-captions":{"variable_name":"_pictures"}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[]},"title":"Lunatic-Model","language":"fr","gitbook":"*"},"file":{"path":"usage/README.md","mtime":"2019-08-02T12:05:12.016Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-08-02T12:09:13.901Z"},"basePath":"..","book":{"language":"fr"}});
         });
     </script>
 </div>
