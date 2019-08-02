@@ -398,23 +398,23 @@
 <p>Dans cette documentation, seul le mod&#xE8;le &#xE0; plat est pr&#xE9;sent&#xE9;.</p>
 <h2 id="structure-du-questionnaire">Structure du questionnaire</h2>
 <p>La structure du questionnaire attendue est la suivante</p>
-<pre class="language-"><code class="lang-json=">{
-  &quot;id&quot;:&quot;idQuestionnaire&quot;,
-  &quot;label&quot;:&quot;Nom du questionnaire&quot;,
-  &quot;components&quot;:[...],
-  &quot;variables&quot;:[...]
-}
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;id&quot;</span><span class="token operator">:</span><span class="token string">&quot;idQuestionnaire&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;label&quot;</span><span class="token operator">:</span><span class="token string">&quot;Nom du questionnaire&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;components&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span>...<span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;variables&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span>...<span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h2 id="structure-g&#xE9;n&#xE9;rale-dun-composant">Structure g&#xE9;n&#xE9;rale d&apos;un composant</h2>
 <p>Tous les composants (except&#xE9; Sequence et Subsequence) ont au moins ces attributs :</p>
-<pre class="language-"><code class="lang-json=">{
-  &quot;id&quot;:&quot;id_du_composant&quot;,
-  &quot;componentType&quot;:&quot;type_du_composant&quot;
-  &quot;label&quot;:&quot;label&quot;,
-  &quot;declarations&quot;:[...]
-  &quot;conditionFilter&quot;:&quot;...&quot;,
-  &quot;mandatory&quot;:true
-}
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;id&quot;</span><span class="token operator">:</span><span class="token string">&quot;id_du_composant&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;componentType&quot;</span><span class="token operator">:</span><span class="token string">&quot;type_du_composant&quot;</span>
+  <span class="token property">&quot;label&quot;</span><span class="token operator">:</span><span class="token string">&quot;label&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;declarations&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span>...<span class="token punctuation">]</span>
+  <span class="token property">&quot;conditionFilter&quot;</span><span class="token operator">:</span><span class="token string">&quot;...&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;mandatory&quot;</span><span class="token operator">:</span><span class="token boolean">true</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <ul>
 <li><code>id</code> : identifiant unique du composant</li>
@@ -425,42 +425,42 @@
 <li><code>mandatory</code> : bool&#xE9;en qui d&#xE9;finit si la r&#xE9;ponse est obligatoire ou non</li>
 </ul>
 <h3 id="les-d&#xE9;clarations">Les d&#xE9;clarations</h3>
-<p>Il s&apos;agit d&apos;un tableau de d&#xE9;clarations </p>
-<pre class="language-"><code class="lang-json=">&quot;declarations&quot; : 
-  [ 
-    { 
-      &quot;id&quot; : &quot;id1&quot;,
-      &quot;declarationType&quot; : &quot;STATEMENT&quot;,
-      &quot;position&quot; : &quot;BEFORE_QUESTION_TEXT&quot;,
-      &quot;label&quot; : &quot;Label de la declaration&quot; 
-    },
-    { 
-      &quot;id&quot; : &quot;id2&quot;,
-      &quot;declarationType&quot; : &quot;HELP&quot;,
-      &quot;position&quot; : &quot;AFTER_QUESTION_TEXT&quot;,
-      &quot;label&quot; : &quot;Label de la declaration&quot; 
-    } 
-  ]
+<p>Il s&apos;agit d&apos;un tableau de d&#xE9;clarations</p>
+<pre class="language-"><code class="lang-json"><span class="token property">&quot;declarations&quot;</span> <span class="token operator">:</span>
+  <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;id&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;id1&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;declarationType&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;STATEMENT&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;position&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;BEFORE_QUESTION_TEXT&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;label&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;Label de la declaration&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;id&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;id2&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;declarationType&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;HELP&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;position&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;AFTER_QUESTION_TEXT&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;label&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;Label de la declaration&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
 </code></pre>
 <ul>
 <li><code>declarationType</code> : &quot;INSTRUCTION&quot;, &quot;COMMENT&quot;, &quot;HELP&quot;, &quot;WARNING&quot; ou &quot;STATEMENT&quot;</li>
-<li><code>position</code> :  &quot;BEFORE_QUESTION_TEXT&quot; ou &quot;AFTER_QUESTION_TEXT&quot;</li>
-<li><code>label</code> : label de la d&#xE9;clarations </li>
+<li><code>position</code> : &quot;BEFORE_QUESTION_TEXT&quot; ou &quot;AFTER_QUESTION_TEXT&quot;</li>
+<li><code>label</code> : label de la d&#xE9;clarations</li>
 </ul>
 <h3 id="les-r&#xE9;ponses">Les r&#xE9;ponses</h3>
 <p>Les composants qui ont pour but de collecter des r&#xE9;ponses ont un attribut &quot;response&quot; ayant pour structure :</p>
-<pre class="language-"><code class="lang-json=">&quot;response&quot; : 
-  { 
-    &quot;name&quot; : &quot;idVariable&quot;,
-    &quot;valueState&quot; : 
-      [ 
-        { &quot;valueType&quot; : &quot;PREVIOUS&quot;, &quot;value&quot; : null },
-        { &quot;valueType&quot; : &quot;COLLECTED&quot;, &quot;value&quot; : null },
-        { &quot;valueType&quot; : &quot;FORCED&quot;, &quot;value&quot; : null },
-        { &quot;valueType&quot; : &quot;EDITED&quot;, &quot;value&quot; : null },
-        { &quot;valueType&quot; : &quot;INPUTED&quot;, &quot;value&quot; : null },
-      ] 
-  }
+<pre class="language-"><code class="lang-json"><span class="token property">&quot;response&quot;</span> <span class="token operator">:</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">&quot;name&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;idVariable&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;valueState&quot;</span> <span class="token operator">:</span>
+      <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span> <span class="token property">&quot;valueType&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;PREVIOUS&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;value&quot;</span> <span class="token operator">:</span> <span class="token null keyword">null</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span> <span class="token property">&quot;valueType&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;COLLECTED&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;value&quot;</span> <span class="token operator">:</span> <span class="token null keyword">null</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span> <span class="token property">&quot;valueType&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;FORCED&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;value&quot;</span> <span class="token operator">:</span> <span class="token null keyword">null</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span> <span class="token property">&quot;valueType&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;EDITED&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;value&quot;</span> <span class="token operator">:</span> <span class="token null keyword">null</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span> <span class="token property">&quot;valueType&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;INPUTED&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;value&quot;</span> <span class="token operator">:</span> <span class="token null keyword">null</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
 </code></pre>
 <p>L&apos;attribut <code>name</code> faisant r&#xE9;f&#xE9;rence &#xE0; l&apos;attribut <code>responseRef</code> d&apos;une variable dans le tableau <code>variables</code> en fin de questionnaire.</p>
 
@@ -506,7 +506,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Les composants","level":"1.4","depth":1,"next":{"title":"Variables","level":"1.4.1","depth":2,"path":"components/Variables.md","ref":"components/Variables.md","articles":[]},"previous":{"title":"Fonctionnement","level":"1.3","depth":1,"path":"working/README.md","ref":"working/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","image-captions","include-codeblock","collapsible-chapters"],"root":"./","styles":{"website":"gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/InseeFr/Lunatic-Model/"},"search":{},"collapsible-chapters":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/InseeFr/Lunatic-Model/tree/master/docs"},"theme-default":{"styles":{"website":"gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"image-captions":{"variable_name":"_pictures"}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[]},"title":"Lunatic-Model","language":"fr","gitbook":"*"},"file":{"path":"components/README.md","mtime":"2019-08-02T12:59:03.863Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-08-02T13:04:11.743Z"},"basePath":"..","book":{"language":"fr"}});
+            gitbook.page.hasChanged({"page":{"title":"Les composants","level":"1.4","depth":1,"next":{"title":"Variables","level":"1.4.1","depth":2,"path":"components/Variables.md","ref":"components/Variables.md","articles":[]},"previous":{"title":"Fonctionnement","level":"1.3","depth":1,"path":"working/README.md","ref":"working/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","image-captions","include-codeblock","collapsible-chapters"],"root":"./","styles":{"website":"gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/InseeFr/Lunatic-Model/"},"search":{},"collapsible-chapters":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/InseeFr/Lunatic-Model/tree/master/docs"},"theme-default":{"styles":{"website":"gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"image-captions":{"variable_name":"_pictures"}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[]},"title":"Lunatic-Model","language":"fr","gitbook":"*"},"file":{"path":"components/README.md","mtime":"2019-08-02T13:07:53.566Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-08-02T13:11:54.416Z"},"basePath":"..","book":{"language":"fr"}});
         });
     </script>
 </div>

@@ -392,10 +392,10 @@
                                 
                                 <h3 id="les-composants-table">Les composants Table</h3>
 <p>Il s&apos;agit du composants le plus complexe de Lunatic.
-Comme tous les composants, il a les attributs communs des composants. Il dispose en plus d&apos;un attribut <code>positioning</code> pouvant &#xEA;tre &#xE9;gale  &#xE0; &quot;HORIZONTAL&quot; ou &quot;VERTICAL&quot;.
+Comme tous les composants, il a les attributs communs des composants. Il dispose en plus d&apos;un attribut <code>positioning</code> pouvant &#xEA;tre &#xE9;gale &#xE0; &quot;HORIZONTAL&quot; ou &quot;VERTICAL&quot;.
 Il y a deux type de composant Table Lunatic, les Table classique qui repr&#xE9;sente un tableau avec un nombre de cellules fixes, et un tableau dynamique avec un nombre de ligne affich&#xE9; de fa&#xE7;on dynamique.
 Dans le dernier cas, il y a un attribut <code>lines</code> qui d&#xE9;finit le minimum et le maximum de ligne.</p>
-<pre class="language-"><code class="lang-json=">&quot;lines&quot;: { &quot;min&quot;:1, &quot;max&quot;:10 }
+<pre class="language-"><code class="lang-json"><span class="token property">&quot;lines&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token property">&quot;min&quot;</span><span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token property">&quot;max&quot;</span><span class="token operator">:</span><span class="token number">10</span> <span class="token punctuation">}</span>
 </code></pre>
 <p>Le JSON fournit dans ce cas contient toutes les lignes possibles du tableau. C&apos;est au composant Lunatic d&apos;afficher dynamiquement les lignes, en affichant &#xE0; l&apos;&#xE9;tat initial du composant autant de lignes que l&apos;attribut min d&#xE9;finit le minimum de ligne.
 Dans tous les cas, le composant Table contient un attribut <code>cells</code> qui est une matrice d&#xE9;fiisant les cellules du tableau &#xE0; afficher.</p>
@@ -409,60 +409,60 @@ Dans tous les cas, le composant Table contient un attribut <code>cells</code> qu
 <li>si la cellule est une ent&#xEA;te de colonne, il y a un attribut <code>headerCell</code>, exemple :<code>&quot;headerCell&quot;:true</code></li>
 <li>si il y a une fusion de colonne/ligne, il y a un attribut <code>colspan</code> / <code>rowspan</code>, exemple :<code>&quot;colspan&quot;:2</code></li>
 </ul>
-<pre class="language-"><code class="lang-json=">{ 
-  &quot;id&quot; : &quot;j4nwc63q&quot;,
-  &quot;componentType&quot; : &quot;Table&quot;,
-  &quot;mandatory&quot; : false,
-  &quot;positioning&quot; : &quot;HORIZONTAL&quot;,
-  &quot;label&quot; : &quot;label de la question&quot;,
-  &quot;declarations&quot;: [...],
-  &quot;conditionFilter&quot; : &quot;#if((!( $READY != &apos;1&apos;)))normal#{else}hidden#end&quot;,
-  &quot;cells&quot; : 
-    [ 
-      [ 
-        { &quot;headerCell&quot; : true, &quot;colspan&quot; : 2, &quot;label&quot; : &quot;&quot;},  
-        { &quot;headerCell&quot; : true, &quot;label&quot; : &quot;Percentage&quot;} 
-      ],
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;id&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;j4nwc63q&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;componentType&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;Table&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;mandatory&quot;</span> <span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;positioning&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;HORIZONTAL&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;label&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;label de la question&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;declarations&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>...<span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;conditionFilter&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;#if((!( $READY != &apos;1&apos;)))normal#{else}hidden#end&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;cells&quot;</span> <span class="token operator">:</span>
+    <span class="token punctuation">[</span>
+      <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span> <span class="token property">&quot;headerCell&quot;</span> <span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token property">&quot;colspan&quot;</span> <span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token property">&quot;label&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span> <span class="token property">&quot;headerCell&quot;</span> <span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token property">&quot;label&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;Percentage&quot;</span><span class="token punctuation">}</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
 
-      [ 
-        { &quot;rowspan&quot; : 2, &quot;label&quot; : &quot;Frozen products&quot;, &quot;value&quot; : &quot;A&quot;},
-        { &quot;label&quot; : &quot;Ice creams&quot;, &quot;value&quot; : &quot;A1&quot;},
-        { &quot;componentType&quot; : &quot;InputNumber&quot;, ...}
-      ],
+      <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span> <span class="token property">&quot;rowspan&quot;</span> <span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token property">&quot;label&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;Frozen products&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;value&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;A&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span> <span class="token property">&quot;label&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;Ice creams&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;value&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;A1&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span> <span class="token property">&quot;componentType&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;InputNumber&quot;</span><span class="token punctuation">,</span> ...<span class="token punctuation">}</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
 
-      [ 
-        { &quot;label&quot; : &quot;Jasper Beardly&quot;, &quot;value&quot; : &quot;A2&quot; },  
-        { &quot;componentType&quot; : &quot;InputNumber&quot;, ...}
-      ],
+      <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span> <span class="token property">&quot;label&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;Jasper Beardly&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;value&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;A2&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span> <span class="token property">&quot;componentType&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;InputNumber&quot;</span><span class="token punctuation">,</span> ...<span class="token punctuation">}</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
 
-      [ 
-        { &quot;rowspan&quot; : 3, &quot;label&quot; : &quot;Meat&quot;, &quot;value&quot; : &quot;B&quot;},
-        { &quot;label&quot; : &quot;Bacon&quot;, &quot;value&quot; : &quot;B1&quot;},
-        { &quot;componentType&quot; : &quot;InputNumber&quot;, ...} 
-      ],
+      <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span> <span class="token property">&quot;rowspan&quot;</span> <span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token property">&quot;label&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;Meat&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;value&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;B&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span> <span class="token property">&quot;label&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;Bacon&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;value&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;B1&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span> <span class="token property">&quot;componentType&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;InputNumber&quot;</span><span class="token punctuation">,</span> ...<span class="token punctuation">}</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
 
-      [ 
-        { &quot;label&quot; : &quot;Pork chop&quot;, &quot;value&quot; : &quot;B2&quot;},
-        { &quot;componentType&quot; : &quot;InputNumber&quot;, ... } 
-      ],
+      <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span> <span class="token property">&quot;label&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;Pork chop&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;value&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;B2&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span> <span class="token property">&quot;componentType&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;InputNumber&quot;</span><span class="token punctuation">,</span> ... <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
 
-      [ 
-        { &quot;label&quot; : &quot;Chicken&quot;, &quot;value&quot; : &quot;B3&quot;},   
-        { &quot;componentType&quot; : &quot;InputNumber&quot;, ...} 
-      ],
+      <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span> <span class="token property">&quot;label&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;Chicken&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;value&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;B3&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span> <span class="token property">&quot;componentType&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;InputNumber&quot;</span><span class="token punctuation">,</span> ...<span class="token punctuation">}</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
 
-      [ 
-        { &quot;label&quot; : &quot;Compote&quot;, &quot;value&quot; : &quot;C&quot;},
-        { &quot;label&quot; : &quot;Powersauce&quot;, &quot;value&quot; : &quot;C1&quot;},
-        { &quot;componentType&quot; : &quot;InputNumber&quot;, ...} 
-      ],
+      <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span> <span class="token property">&quot;label&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;Compote&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;value&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;C&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span> <span class="token property">&quot;label&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;Powersauce&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;value&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;C1&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span> <span class="token property">&quot;componentType&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;InputNumber&quot;</span><span class="token punctuation">,</span> ...<span class="token punctuation">}</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
 
-      [ 
-        { &quot;colspan&quot; : 2, &quot;label&quot; : &quot;Other&quot;, &quot;value&quot; : &quot;D&quot;},  
-        { &quot;componentType&quot; : &quot;InputNumber&quot;, ...} 
-      ] 
-    ] 
-}
+      <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span> <span class="token property">&quot;colspan&quot;</span> <span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token property">&quot;label&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;Other&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;value&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;D&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span> <span class="token property">&quot;componentType&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;InputNumber&quot;</span><span class="token punctuation">,</span> ...<span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>R&#xE9;sultat en composant Lunatic :</p>
 <p><strong>label de la question</strong></p>
@@ -507,6 +507,7 @@ Dans tous les cas, le composant Table contient un attribut <code>cells</code> qu
         </tr>
     </tbody>
 </table>
+
                                 
                                 </section>
                             
@@ -549,7 +550,7 @@ Dans tous les cas, le composant Table contient un attribut <code>cells</code> qu
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Table","level":"1.4.11","depth":2,"next":{"title":"Comment utiliser Lunatic-Model","level":"1.5","depth":1,"path":"usage/README.md","ref":"usage/README.md","articles":[]},"previous":{"title":"CheckboxGroup","level":"1.4.10","depth":2,"path":"components/CheckboxGroup.md","ref":"components/CheckboxGroup.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","image-captions","include-codeblock","collapsible-chapters"],"root":"./","styles":{"website":"gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/InseeFr/Lunatic-Model/"},"search":{},"collapsible-chapters":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/InseeFr/Lunatic-Model/tree/master/docs"},"theme-default":{"styles":{"website":"gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"image-captions":{"variable_name":"_pictures"}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[]},"title":"Lunatic-Model","language":"fr","gitbook":"*"},"file":{"path":"components/Table.md","mtime":"2019-08-02T12:59:03.863Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-08-02T13:04:11.743Z"},"basePath":"..","book":{"language":"fr"}});
+            gitbook.page.hasChanged({"page":{"title":"Table","level":"1.4.11","depth":2,"next":{"title":"Comment utiliser Lunatic-Model","level":"1.5","depth":1,"path":"usage/README.md","ref":"usage/README.md","articles":[]},"previous":{"title":"CheckboxGroup","level":"1.4.10","depth":2,"path":"components/CheckboxGroup.md","ref":"components/CheckboxGroup.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","image-captions","include-codeblock","collapsible-chapters"],"root":"./","styles":{"website":"gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/InseeFr/Lunatic-Model/"},"search":{},"collapsible-chapters":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/InseeFr/Lunatic-Model/tree/master/docs"},"theme-default":{"styles":{"website":"gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"image-captions":{"variable_name":"_pictures"}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[]},"title":"Lunatic-Model","language":"fr","gitbook":"*"},"file":{"path":"components/Table.md","mtime":"2019-08-02T13:07:53.566Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-08-02T13:11:54.416Z"},"basePath":"..","book":{"language":"fr"}});
         });
     </script>
 </div>

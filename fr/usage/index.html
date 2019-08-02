@@ -388,7 +388,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="comment-utiliser-luantic-model">Comment utiliser Luantic-Model</h1>
+                                <h1 id="comment-utiliser-lunatic-model">Comment utiliser Lunatic-Model</h1>
 <h2 id="installation">Installation</h2>
 <p>Il s&apos;agit d&apos;un librairie java utilisant Maven.
 N&apos;&#xE9;tant pas pour le moment publi&#xE9;e sur les repository maven, veuillez suivre les &#xE9;tapes suivantes:</p>
@@ -401,7 +401,7 @@ N&apos;&#xE9;tant pas pour le moment publi&#xE9;e sur les repository maven, veui
 </li>
 <li>int&#xE9;grer la d&#xE9;pendances dans votre projet maven </li>
 </ul>
-<pre class="language-"><code class="lang-xml="><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+<pre class="language-"><code class="lang-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>fr.insee.lunatic<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>lunatic-model<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>1.0.0<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
@@ -424,9 +424,9 @@ N&apos;&#xE9;tant pas pour le moment publi&#xE9;e sur les repository maven, veui
 <p>Le fichier en entr&#xE9;e doit &#xEA;tre issue du g&#xE9;n&#xE9;rateur de questionnaire Eno (ddi2js).</p>
 <p>En sortie :  un json au format <code>String</code>.</p>
 <p>Transformation:</p>
-<pre class="language-"><code class="lang-java=">XMLLunaticToJSONLunaticTranslator translator = new XMLLunaticToJSONLunaticTranslator();
-JSONCleaner jsonCleaner = new JSONCleaner();
-String jsonQuestionnaire = jsonCleaner.clean(translator.translate(in));
+<pre class="language-"><code class="lang-java"><span class="token class-name">XMLLunaticToJSONLunaticTranslator</span> translator <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLLunaticToJSONLunaticTranslator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">JSONCleaner</span> jsonCleaner <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JSONCleaner</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> jsonQuestionnaire <span class="token operator">=</span> jsonCleaner<span class="token punctuation">.</span><span class="token function">clean</span><span class="token punctuation">(</span>translator<span class="token punctuation">.</span><span class="token function">translate</span><span class="token punctuation">(</span>in<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h3 id="transformation-2">Transformation 2</h3>
 <p>En entr&#xE9;e de la transformation, il possible d&apos;avoir:</p>
@@ -438,10 +438,10 @@ String jsonQuestionnaire = jsonCleaner.clean(translator.translate(in));
 <p>Le fichier en entr&#xE9;e doit &#xEA;tre issue du g&#xE9;n&#xE9;rateur de questionnaire Eno (ddi2js).</p>
 <p>En sortie :  un json au format <code>String</code>.</p>
 <p>Transformation:</p>
-<pre class="language-"><code class="lang-java=">XMLLunaticToXMLLunaticFlatTranslator translator = new XMLLunaticToXMLLunaticFlatTranslator();
-XMLLunaticFlatToJSONLunaticFlatTranslator translator2 = new XMLLunaticFlatToJSONLunaticFlatTranslator();
-JSONCleaner jsonCleaner = new JSONCleaner();
-String jsonQuestionnaire = jsonCleaner.clean(translator2.translate(translator.generate(in)));
+<pre class="language-"><code class="lang-java"><span class="token class-name">XMLLunaticToXMLLunaticFlatTranslator</span> translator <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLLunaticToXMLLunaticFlatTranslator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">XMLLunaticFlatToJSONLunaticFlatTranslator</span> translator2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLLunaticFlatToJSONLunaticFlatTranslator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">JSONCleaner</span> jsonCleaner <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JSONCleaner</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> jsonQuestionnaire <span class="token operator">=</span> jsonCleaner<span class="token punctuation">.</span><span class="token function">clean</span><span class="token punctuation">(</span>translator2<span class="token punctuation">.</span><span class="token function">translate</span><span class="token punctuation">(</span>translator<span class="token punctuation">.</span><span class="token function">generate</span><span class="token punctuation">(</span>in<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 
                                 
@@ -482,7 +482,7 @@ String jsonQuestionnaire = jsonCleaner.clean(translator2.translate(translator.ge
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Comment utiliser Lunatic-Model","level":"1.5","depth":1,"previous":{"title":"Table","level":"1.4.11","depth":2,"path":"components/Table.md","ref":"components/Table.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","image-captions","include-codeblock","collapsible-chapters"],"root":"./","styles":{"website":"gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/InseeFr/Lunatic-Model/"},"search":{},"collapsible-chapters":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/InseeFr/Lunatic-Model/tree/master/docs"},"theme-default":{"styles":{"website":"gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"image-captions":{"variable_name":"_pictures"}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[]},"title":"Lunatic-Model","language":"fr","gitbook":"*"},"file":{"path":"usage/README.md","mtime":"2019-08-02T12:59:03.863Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-08-02T13:04:11.743Z"},"basePath":"..","book":{"language":"fr"}});
+            gitbook.page.hasChanged({"page":{"title":"Comment utiliser Lunatic-Model","level":"1.5","depth":1,"previous":{"title":"Table","level":"1.4.11","depth":2,"path":"components/Table.md","ref":"components/Table.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","image-captions","include-codeblock","collapsible-chapters"],"root":"./","styles":{"website":"gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/InseeFr/Lunatic-Model/"},"search":{},"collapsible-chapters":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/InseeFr/Lunatic-Model/tree/master/docs"},"theme-default":{"styles":{"website":"gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"image-captions":{"variable_name":"_pictures"}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[]},"title":"Lunatic-Model","language":"fr","gitbook":"*"},"file":{"path":"usage/README.md","mtime":"2019-08-02T13:07:53.566Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-08-02T13:11:54.416Z"},"basePath":"..","book":{"language":"fr"}});
         });
     </script>
 </div>
