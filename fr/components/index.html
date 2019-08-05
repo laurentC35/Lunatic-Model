@@ -391,11 +391,12 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="les-composants">Les composants</h1>
-<p>La librairie Lunatic-Model d&#xE9;finie un ensemble de composants Lunatic au format JSON.</p>
+<p>La librairie Lunatic-Model d&#xE9;finie un ensemble de composants <a href="https://inseefr.github.io/Lunatic/storybook" target="_blank">Lunatic</a> au format JSON.</p>
 <p>La diff&#xE9;rence entre le mod&#xE8;le hi&#xE9;rarchique et le mod&#xE8;le &#xE0; plat est tr&#xE8;s faible :</p>
 <p>Dans le mod&#xE8;le hi&#xE9;rarchique, les composants Sequence et Subsequence contiennent des &#xE9;galement des composants.</p>
 <p>Alors que dans le mod&#xE8;le &#xE0; plat, les composants sont les uns &#xE0; la suite des autres.</p>
 <p>Dans cette documentation, seul le mod&#xE8;le &#xE0; plat est pr&#xE9;sent&#xE9;.</p>
+<hr>
 <h2 id="structure-du-questionnaire">Structure du questionnaire</h2>
 <p>La structure du questionnaire attendue est la suivante</p>
 <pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
@@ -405,13 +406,14 @@
   <span class="token property">&quot;variables&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span>...<span class="token punctuation">]</span>
 <span class="token punctuation">}</span>
 </code></pre>
+<hr>
 <h2 id="structure-g&#xE9;n&#xE9;rale-dun-composant">Structure g&#xE9;n&#xE9;rale d&apos;un composant</h2>
 <p>Tous les composants (except&#xE9; Sequence et Subsequence) ont au moins ces attributs :</p>
 <pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
   <span class="token property">&quot;id&quot;</span><span class="token operator">:</span><span class="token string">&quot;id_du_composant&quot;</span><span class="token punctuation">,</span>
-  <span class="token property">&quot;componentType&quot;</span><span class="token operator">:</span><span class="token string">&quot;type_du_composant&quot;</span>
+  <span class="token property">&quot;componentType&quot;</span><span class="token operator">:</span><span class="token string">&quot;type_du_composant&quot;</span><span class="token punctuation">,</span>
   <span class="token property">&quot;label&quot;</span><span class="token operator">:</span><span class="token string">&quot;label&quot;</span><span class="token punctuation">,</span>
-  <span class="token property">&quot;declarations&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span>...<span class="token punctuation">]</span>
+  <span class="token property">&quot;declarations&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span>...<span class="token punctuation">]</span><span class="token punctuation">,</span>
   <span class="token property">&quot;conditionFilter&quot;</span><span class="token operator">:</span><span class="token string">&quot;...&quot;</span><span class="token punctuation">,</span>
   <span class="token property">&quot;mandatory&quot;</span><span class="token operator">:</span><span class="token boolean">true</span>
 <span class="token punctuation">}</span>
@@ -424,6 +426,7 @@
 <li><code>conditionFilter</code> : filtre &#xE9;crit dans le langage VTL pour savoir s&apos;il faut afficher ou non le questionnaire.</li>
 <li><code>mandatory</code> : bool&#xE9;en qui d&#xE9;finit si la r&#xE9;ponse est obligatoire ou non</li>
 </ul>
+<hr>
 <h3 id="les-d&#xE9;clarations">Les d&#xE9;clarations</h3>
 <p>Il s&apos;agit d&apos;un tableau de d&#xE9;clarations</p>
 <pre class="language-"><code class="lang-json"><span class="token property">&quot;declarations&quot;</span> <span class="token operator">:</span>
@@ -447,6 +450,7 @@
 <li><code>position</code> : &quot;BEFORE_QUESTION_TEXT&quot; ou &quot;AFTER_QUESTION_TEXT&quot;</li>
 <li><code>label</code> : label de la d&#xE9;clarations</li>
 </ul>
+<hr>
 <h3 id="les-r&#xE9;ponses">Les r&#xE9;ponses</h3>
 <p>Les composants qui ont pour but de collecter des r&#xE9;ponses ont un attribut &quot;response&quot; ayant pour structure :</p>
 <pre class="language-"><code class="lang-json"><span class="token property">&quot;response&quot;</span> <span class="token operator">:</span>
@@ -506,7 +510,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Les composants","level":"1.4","depth":1,"next":{"title":"Variables","level":"1.4.1","depth":2,"path":"components/Variables.md","ref":"components/Variables.md","articles":[]},"previous":{"title":"Fonctionnement","level":"1.3","depth":1,"path":"working/README.md","ref":"working/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","image-captions","include-codeblock","collapsible-chapters"],"root":"./","styles":{"website":"gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/InseeFr/Lunatic-Model/"},"search":{},"collapsible-chapters":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/InseeFr/Lunatic-Model/tree/master/docs"},"theme-default":{"styles":{"website":"gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"image-captions":{"variable_name":"_pictures"}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[]},"title":"Lunatic-Model","language":"fr","gitbook":"*"},"file":{"path":"components/README.md","mtime":"2019-08-02T13:36:06.530Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-08-02T13:37:38.733Z"},"basePath":"..","book":{"language":"fr"}});
+            gitbook.page.hasChanged({"page":{"title":"Les composants","level":"1.4","depth":1,"next":{"title":"Variables","level":"1.4.1","depth":2,"path":"components/Variables.md","ref":"components/Variables.md","articles":[]},"previous":{"title":"Fonctionnement","level":"1.3","depth":1,"path":"working/README.md","ref":"working/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","image-captions","include-codeblock","collapsible-chapters"],"root":"./","styles":{"website":"gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/InseeFr/Lunatic-Model/"},"search":{},"collapsible-chapters":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/InseeFr/Lunatic-Model/tree/master/docs"},"theme-default":{"styles":{"website":"gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"image-captions":{"variable_name":"_pictures"}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[]},"title":"Lunatic-Model","language":"fr","gitbook":"*"},"file":{"path":"components/README.md","mtime":"2019-08-05T07:59:12.192Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-08-05T08:03:02.477Z"},"basePath":"..","book":{"language":"fr"}});
         });
     </script>
 </div>

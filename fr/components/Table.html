@@ -390,15 +390,21 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="les-composants-table">Les composants Table</h3>
+                                <h2 id="le-composant-table">Le composant <code>Table</code></h2>
 <p>Il s&apos;agit du composants le plus complexe de Lunatic.
-Comme tous les composants, il a les attributs communs des composants. Il dispose en plus d&apos;un attribut <code>positioning</code> pouvant &#xEA;tre &#xE9;gale &#xE0; &quot;HORIZONTAL&quot; ou &quot;VERTICAL&quot;.
-Il y a deux type de composant Table Lunatic, les Table classique qui repr&#xE9;sente un tableau avec un nombre de cellules fixes, et un tableau dynamique avec un nombre de ligne affich&#xE9; de fa&#xE7;on dynamique.
-Dans le dernier cas, il y a un attribut <code>lines</code> qui d&#xE9;finit le minimum et le maximum de ligne.</p>
+Comme tous les composants, il a les attributs communs des composants. Il dispose en plus d&apos;un attribut <code>positioning</code> pouvant &#xEA;tre &#xE9;gale &#xE0; &quot;HORIZONTAL&quot; ou &quot;VERTICAL&quot;.</p>
+<p>Il y a deux types de composants <code>Table</code> Lunatic :</p>
+<ul>
+<li>les <code>Table</code> classique qui repr&#xE9;sente un tableau avec un nombre de cellules fixes</li>
+<li>les <code>Table</code> dynamique qui repr&#xE9;sente un tableau dynamique avec un nombre de ligne affich&#xE9; de fa&#xE7;on dynamique.</li>
+</ul>
+<p>Dans le dernier cas, il y a un attribut <code>lines</code> qui d&#xE9;finit le minimum et le maximum de lignes.</p>
 <pre class="language-"><code class="lang-json"><span class="token property">&quot;lines&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token property">&quot;min&quot;</span><span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token property">&quot;max&quot;</span><span class="token operator">:</span><span class="token number">10</span> <span class="token punctuation">}</span>
 </code></pre>
 <p>Le JSON fournit dans ce cas contient toutes les lignes possibles du tableau. C&apos;est au composant Lunatic d&apos;afficher dynamiquement les lignes, en affichant &#xE0; l&apos;&#xE9;tat initial du composant autant de lignes que l&apos;attribut min d&#xE9;finit le minimum de ligne.
 Dans tous les cas, le composant Table contient un attribut <code>cells</code> qui est une matrice d&#xE9;fiisant les cellules du tableau &#xE0; afficher.</p>
+<hr>
+<h3 id="les-cells">Les <code>cells</code></h3>
 <p>Une cellule peut &#xEA;tre soit:</p>
 <ul>
 <li>un composant</li>
@@ -464,7 +470,7 @@ Dans tous les cas, le composant Table contient un attribut <code>cells</code> qu
     <span class="token punctuation">]</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p>R&#xE9;sultat en composant Lunatic :</p>
+<p>R&#xE9;sultat en composant Lunatic du <code>Table</code> classique :</p>
 <p><strong>label de la question</strong></p>
 <table>
     <thead>
@@ -550,7 +556,7 @@ Dans tous les cas, le composant Table contient un attribut <code>cells</code> qu
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Table","level":"1.4.11","depth":2,"next":{"title":"Comment utiliser Lunatic-Model","level":"1.5","depth":1,"path":"usage/README.md","ref":"usage/README.md","articles":[]},"previous":{"title":"CheckboxGroup","level":"1.4.10","depth":2,"path":"components/CheckboxGroup.md","ref":"components/CheckboxGroup.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","image-captions","include-codeblock","collapsible-chapters"],"root":"./","styles":{"website":"gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/InseeFr/Lunatic-Model/"},"search":{},"collapsible-chapters":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/InseeFr/Lunatic-Model/tree/master/docs"},"theme-default":{"styles":{"website":"gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"image-captions":{"variable_name":"_pictures"}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[]},"title":"Lunatic-Model","language":"fr","gitbook":"*"},"file":{"path":"components/Table.md","mtime":"2019-08-02T13:36:06.530Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-08-02T13:37:38.733Z"},"basePath":"..","book":{"language":"fr"}});
+            gitbook.page.hasChanged({"page":{"title":"Table","level":"1.4.11","depth":2,"next":{"title":"Comment utiliser Lunatic-Model","level":"1.5","depth":1,"path":"usage/README.md","ref":"usage/README.md","articles":[]},"previous":{"title":"CheckboxGroup","level":"1.4.10","depth":2,"path":"components/CheckboxGroup.md","ref":"components/CheckboxGroup.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","image-captions","include-codeblock","collapsible-chapters"],"root":"./","styles":{"website":"gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/InseeFr/Lunatic-Model/"},"search":{},"collapsible-chapters":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/InseeFr/Lunatic-Model/tree/master/docs"},"theme-default":{"styles":{"website":"gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"image-captions":{"variable_name":"_pictures"}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[]},"title":"Lunatic-Model","language":"fr","gitbook":"*"},"file":{"path":"components/Table.md","mtime":"2019-08-05T07:59:12.192Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-08-05T08:03:02.477Z"},"basePath":"..","book":{"language":"fr"}});
         });
     </script>
 </div>
