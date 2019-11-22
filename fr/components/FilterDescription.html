@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Subsequence · Lunatic-Model</title>
+        <title>FilterDescription · Lunatic-Model</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Input.html" />
+    <link rel="next" href="Table.html" />
     
     
-    <link rel="prev" href="Sequence.html" />
+    <link rel="prev" href="CheckboxGroup.html" />
     
 
     </head>
@@ -210,7 +210,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.3" data-path="Subsequence.html">
+        <li class="chapter " data-level="1.4.3" data-path="Subsequence.html">
             
                 <a href="Subsequence.html">
             
@@ -314,7 +314,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.11" data-path="FilterDescription.html">
+        <li class="chapter active" data-level="1.4.11" data-path="FilterDescription.html">
             
                 <a href="FilterDescription.html">
             
@@ -388,7 +388,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Subsequence</a>
+        <a href=".." >FilterDescription</a>
     </h1>
 </div>
 
@@ -403,14 +403,17 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="le-composant-subsequence">Le composant <code>Subsequence</code></h3>
-<p>Structure du composant Subsequence</p>
+                                <h3 id="le-composant-filterdescription">Le composant <code>FilterDescription</code></h3>
+<p>Il s&apos;agit d&apos;un composant ayant pour but d&apos;afficher une description d&apos;un filtre.</p>
+<p>Ce composant est plus l&#xE9;ger que les autres car il a seulement les attributs: <code>id</code>, <code>componentType</code> et <code>label</code> du composant de base. Il dispose en revanche d&apos;un attribut suppl&#xE9;mentaire :</p>
+<p><code>management:true/false</code></p>
+<p>Il d&#xE9;finit si le composant doit &#xEA;tre affich&#xE9; ou non, par d&#xE9;faut, il est &#xE0; <code>false</code>.
+Sa structure est la suivante :</p>
 <pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
-  <span class="token property">&quot;id&quot;</span><span class="token operator">:</span><span class="token string">&quot;id_du_composant&quot;</span><span class="token punctuation">,</span>
-  <span class="token property">&quot;componentType&quot;</span><span class="token operator">:</span><span class="token string">&quot;Subsequence&quot;</span><span class="token punctuation">,</span>
-  <span class="token property">&quot;label&quot;</span><span class="token operator">:</span><span class="token string">&quot;Subsequence label&quot;</span><span class="token punctuation">,</span>
-  <span class="token property">&quot;declarations&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span>...<span class="token punctuation">]</span><span class="token punctuation">,</span>
-  <span class="token property">&quot;conditionFilter&quot;</span><span class="token operator">:</span><span class="token string">&quot;...&quot;</span>
+  <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;j6p6my1d&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;componentType&quot;</span><span class="token operator">:</span> <span class="token string">&quot;FilterDescription&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;management&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;label&quot;</span><span class="token operator">:</span> <span class="token string">&quot;If you are not ready, please go to the end of the questionnaire&quot;</span>
 <span class="token punctuation">}</span>
 </code></pre>
 
@@ -440,12 +443,12 @@
 
             
                 
-                <a href="Sequence.html" class="navigation navigation-prev " aria-label="Previous page: Sequence">
+                <a href="CheckboxGroup.html" class="navigation navigation-prev " aria-label="Previous page: CheckboxGroup">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="Input.html" class="navigation navigation-next " aria-label="Next page: Input">
+                <a href="Table.html" class="navigation navigation-next " aria-label="Next page: Table">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -456,7 +459,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Subsequence","level":"1.4.3","depth":2,"next":{"title":"Input","level":"1.4.4","depth":2,"path":"components/Input.md","ref":"components/Input.md","articles":[]},"previous":{"title":"Sequence","level":"1.4.2","depth":2,"path":"components/Sequence.md","ref":"components/Sequence.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","image-captions","include-codeblock","collapsible-chapters"],"root":"./","styles":{"website":"gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/InseeFr/Lunatic-Model/"},"search":{},"collapsible-chapters":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/InseeFr/Lunatic-Model/tree/master/docs"},"theme-default":{"styles":{"website":"gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"image-captions":{"variable_name":"_pictures"}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[]},"title":"Lunatic-Model","language":"fr","gitbook":"*"},"file":{"path":"components/Subsequence.md","mtime":"2019-11-22T14:35:20.861Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-11-22T14:37:16.355Z"},"basePath":"..","book":{"language":"fr"}});
+            gitbook.page.hasChanged({"page":{"title":"FilterDescription","level":"1.4.11","depth":2,"next":{"title":"Table","level":"1.4.12","depth":2,"path":"components/Table.md","ref":"components/Table.md","articles":[]},"previous":{"title":"CheckboxGroup","level":"1.4.10","depth":2,"path":"components/CheckboxGroup.md","ref":"components/CheckboxGroup.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","image-captions","include-codeblock","collapsible-chapters"],"root":"./","styles":{"website":"gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/InseeFr/Lunatic-Model/"},"search":{},"collapsible-chapters":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/InseeFr/Lunatic-Model/tree/master/docs"},"theme-default":{"styles":{"website":"gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"image-captions":{"variable_name":"_pictures"}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[]},"title":"Lunatic-Model","language":"fr","gitbook":"*"},"file":{"path":"components/FilterDescription.md","mtime":"2019-11-22T14:35:20.861Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-11-22T14:37:16.355Z"},"basePath":"..","book":{"language":"fr"}});
         });
     </script>
 </div>
