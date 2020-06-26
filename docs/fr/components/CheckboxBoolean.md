@@ -14,7 +14,7 @@ Sa structure est la suivante :
   "mandatory" : false,
   "label" : "label de la question",
   "declarations" : [...],
-  "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
+  "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
   "response" : {...}
 }
 ```
