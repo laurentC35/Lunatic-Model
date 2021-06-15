@@ -9,12 +9,12 @@ Sa structure est la suivante :
 
 ```json
 {
-  "id" : "j3343qhx",
-  "componentType" : "CheckboxBoolean",
-  "mandatory" : false,
-  "label" : "label de la question",
-  "declarations" : [...],
-  "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
-  "response" : {...}
+  "id": "j6p0np9q",
+  "componentType": "CheckboxBoolean",
+  "mandatory": false,
+  "label": "\"➡ 2. Are you ready?\"",
+  "conditionFilter": "\"normal\"",
+  "bindingDependencies": ["READY"],
+  "response": { "name": "READY" }
 }
 ```
